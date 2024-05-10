@@ -1,12 +1,19 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDom from "react-dom/client";
 import './index.css';
 import App from './App';
 
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import {BrowserRouter} from "react-router-dom"
+
+const root = ReactDom.createRoot(document.getElementById('root')); // createRoot(container!) if you use TypeScript
+
 root.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+  <App tab="home" />
+  </BrowserRouter>
   </React.StrictMode>
-);
+  );
+
+

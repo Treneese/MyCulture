@@ -1,0 +1,23 @@
+.logo {
+    top: 16px;
+    left: 16px;
+padding: .6rem;
+
+}
+img{
+height: 100%;
+}
+.header{
+    background-color:rgb(48, 188, 17);
+    height: 10rem;
+    top: 10px;
+    min-height: 10%;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+}
+/* .header-title{
+    font-size: calc(10px + 2vmin);
+    color: rgb(242, 236, 236);
+} */
