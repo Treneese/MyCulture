@@ -15,10 +15,10 @@ function Header() {
         <img src={process.env.PUBLIC_URL + '/Images/Libra Serif Modern.png'} alt="Culture Logo" />
       </span>
 
-      <button className="toggle" onClick={toggleSidebar}></button>
-
-      {/* Pass sidebarVisible state and toggleSidebar function to NavSidebar */}
-      <NavSidebar isSidebarOpen={sidebarVisible} toggleSidebar={toggleSidebar} />
+      {/* <button className="toggle" onClick={() => setSidebarVisible(true)}/> */}
+       <NavSidebar isSidebarOpen={sidebarVisible} toggleSidebar={toggleSidebar} /> 
+   <p1>“A nation's culture resides in the hearts and in the soul of its people” by Mahatma Gandhi.
+</p1>
     </header>
   );
 };

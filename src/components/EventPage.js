@@ -1,29 +1,63 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import EventList from "./EventList";
 import { Route, Routes} from 'react-router-dom';
 import Search from "./Search";
 import Header from "./Header";
 import EventFormPage from './EventFormPage';
-import Sports from './Sports';
-import Festivals from './Festivals';
-import Business from './Busniess'
+// import Sports from './Sports';
+// import Festivals from './Festivals';
+// import Business from './Busniess';
+import './EventPage.css';
+import EventCard from "./EventCard";
 
-function EventPage() {
+function EventPage( ) {
   const [search, setSearch] = useState("");
   const [events, setEvents] = useState([]);
+  const [ setError] = useState(null);
+
+  useEffect(() => {
+    fetch("http://localhost:3001/events")
+      .then((resp) => {
+        if (!resp.ok) {
+          throw new Error("Failed to fetch events. Please try again later.");
+        }
+        return resp.json();
+      })
+      .then((data) =>  setEvents(data))
+   
+      .catch((error) =>  setError(error.message))
+    
+   
+  },[setEvents]);
 
   function handleSearch(searchEvent) {
     setSearch(searchEvent);
   }
+  function editEvent(eventId) {
+    const filteredEvents = events.filter((event) => event.id !== eventId)
+    setEvents(filteredEvents)
 
+
+  }
+  const filteredEvents = events.filter((event) => {
+    const lowercaseSearch = typeof search === 'string' ? search.toLowerCase() : '';
+    const lowercaseName = event.name?.toLowerCase();
+    return lowercaseName.includes(lowercaseSearch);
+});
+
+  
+  const eventCards = filteredEvents.map((event) => (
+    <EventCard key={event.id} event = {event} editEvent={editEvent}/>
+   
+  ))
   return (
-    <main>
+    <main className='eventpage'>
      
-<Search onSearch={handleSearch} events={events} /> 
-<Sports events={events} setEvents={setEvents}/>
-<Business events={events} setEvents={setEvents} />
-<EventList events={events} setEvents={setEvents}/>
-<Festivals events={events} setEvents={setEvents} />
+<Search onSearch={handleSearch} events={events}  eventCards={ eventCards}/> 
+{/* <Sports events={events} setEvents={setEvents} eventCards={ eventCards}/>
+<Business events={events} setEvents={setEvents} eventCards={ eventCards}/>
+<EventList events={events} setEvents={setEvents} eventCards={ eventCards}/>
+<Festivals events={events} setEvents={setEvents}  eventCards={ eventCards}/> */}
     </main>
   );
 }

@@ -17,6 +17,29 @@ height: 100%;
     width: 100%;
 
 }
+.toggle{
+    top: 16px;
+    right: 16px;
+    padding: auto;
+}
+button{
+    top: 16px;
+    right: 16px;
+    padding: auto;  
+}
+.menu{
+    list-style: none;
+    text-decoration: none;
+    padding: .3rem;
+    border: 0.3em rgb(255, 255, 255);
+    display: inline-block;
+    flex-direction: row;
+    background-color: rgb(36, 158, 2);
+    color: green;
+
+    
+
+}
 /* .header-title{
     font-size: calc(10px + 2vmin);
     color: rgb(242, 236, 236);

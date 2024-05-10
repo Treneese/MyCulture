@@ -1,42 +1,36 @@
 import React, { useState, useEffect } from "react";
 import EventCard from "./EventCard";
+import './Card.css';
+import "./EventList.css";
 
-function Business({ events, setEvents }) {
+function Business({ events}) {
   const [businessEvents, setBusinessEvents] = useState([]);
 
-  useEffect(() => {
-    fetch('http://localhost:3001/events')
-      .then(response => response.json())
-      .then(data => {
-        // Set the fetched event data directly
-        setEvents(data || []); // Set events directly without accessing the 'events' property
-      })
-      .catch(error => {
-        console.error('Error fetching event data:', error);
-      });
-  }, [setEvents]);
-
-  useEffect(() => {
-    if (events) {
-      const businessEventsData = events.filter(event => event.category === "Business");
-      setBusinessEvents(businessEventsData);
-    }
-  }, [events]);
-
-  const eventCards = businessEvents.map((event) => (
-    <EventCard key={event.id} event={event} />
-  ));
-
-  return (
-    <div>
-      <h1>Business Events</h1>
+    useEffect(() => {
+      if (events) {
+        const filteredEvents = events.filter(
+          (event) =>
+            event.category === "Category: Business"
+        );
+        setBusinessEvents(filteredEvents);
+      }
+    }, [events]);
+  
+    const eventCards = businessEvents.map((event) => (
+      <EventCard key={event.id} event={event} />
+    ));
+  
+    return (
       <div>
-      
-        {eventCards}
+        <h1>Business Events</h1>
+        <div>
+          {eventCards.length ? (
+            eventCards
+          ) : (
+            <p>No business events available.</p>
+          )}
+        </div>
       </div>
-    </div>
-  );
-}
-
-
+    );
+  }
 export default Business;

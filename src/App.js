@@ -9,6 +9,7 @@ import Business from './components/Busniess'
 import Header from './components/Header';
 import Search from './components/Search';
 import EventList from './components/EventList';
+import About from './About';
 
 function App() {
   // const [sidebarVisible, setSidebarVisible] = useState(false);
@@ -31,11 +32,12 @@ function App() {
      
       <Search onSearch={handleSearch} events={events} />
 <Routes>
-<Route path="/Events" element={<EventList />}/>
+<Route path="/Events" element={<EventList search={search}/>}/>
 <Route path="/Events/Sports" element={<Sports /> }/>
 <Route path="/Events/Festivals" element={<Festivals />}/>
 <Route path="/Events/Business" element={<Business />}/>
 <Route path="/Events/Form" element={<EventFormPage />}/>
+<Route path="/About" element={<About/>}/>
 </Routes>
 
    

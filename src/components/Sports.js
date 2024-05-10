@@ -1,25 +1,19 @@
 import React, { useState, useEffect } from "react";
 import EventCard from "./EventCard";
+import './Card.css';
+import "./EventList.css";
 
-function SportsEvents({ events, setEvents }) {
+
+function Sports({ events, setEvents }) {
   const [sportsEvents, setSportsEvents] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3001/events')
-      .then(response => response.json())
-      .then(data => {
-        // Set the fetched event data directly
-        setEvents(data || []); // Set events directly without accessing the 'events' property
-      })
-      .catch(error => {
-        console.error('Error fetching event data:', error);
-      });
-  }, [setEvents]);
-
-  useEffect(() => {
     if (events) {
-      const sportsEventsData = events.filter(event => event.category === "Sports");
-      setSportsEvents(sportsEventsData);
+      const filteredEvents = events.filter(
+        (event) =>
+          event.category === "Category: Sports"
+      );
+      setSportsEvents(filteredEvents);
     }
   }, [events]);
 
@@ -31,13 +25,15 @@ function SportsEvents({ events, setEvents }) {
     <div>
       <h1>Sports Events</h1>
       <div>
-      
-        {eventCards}
+        {eventCards.length ? (
+          eventCards
+        ) : (
+          <p>No sport events available.</p>
+        )}
       </div>
     </div>
   );
 }
-
-export default SportsEvents;
+export default Sports;
 
 
