@@ -10,7 +10,8 @@ import Header from './components/Header';
 import Search from './components/Search';
 import EventList from './components/EventList';
 import About from './About';
-
+import NavSidebar from "./components/NavSideBar";
+import Concerts from './components/Conerts';
 function App() {
   // const [sidebarVisible, setSidebarVisible] = useState(false);
   const [events, setEvents] = useState([])
@@ -30,11 +31,14 @@ function App() {
       
       <Header />
      
+     <NavSidebar/>
+
       <Search onSearch={handleSearch} events={events} />
 <Routes>
 <Route path="/Events" element={<EventList search={search}/>}/>
 <Route path="/Events/Sports" element={<Sports /> }/>
 <Route path="/Events/Festivals" element={<Festivals />}/>
+<Route path="/Events/Concerts" element={<Concerts />}/>
 <Route path="/Events/Business" element={<Business />}/>
 <Route path="/Events/Form" element={<EventFormPage />}/>
 <Route path="/About" element={<About/>}/>

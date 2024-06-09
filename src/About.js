@@ -1,13 +1,14 @@
-
+import React from 'react';
+import './About.css';
 
 function About(){
 
   return (
-   <div className="about">
-<h1 className="title">About</h1>
-<p1>My Culture is an App where people can find different kinds of events, around the us.</p1>
+   <div className="box">
+<h1 className="title">What is Culture?</h1>
+<p className="sub-title">My Culture is an App where people can find different kinds of events, around the United States.</p>
 
-<p2>Culture refers to the cumulative deposit of knowledge, experience, beliefs, values, attitudes, meanings, hierarchies, religion, notions of time, roles, spatial relations, concepts of the universe, and material objects and possessions acquired by a group of people in the course of generations through individual and group striving.
+<p className="def">Culture refers to the cumulative deposit of knowledge, experience, beliefs, values, attitudes, meanings, hierarchies, religion, notions of time, roles, spatial relations, concepts of the universe, and material objects and possessions acquired by a group of people in the course of generations through individual and group striving.
 Culture is the systems of knowledge shared by a relatively large group of people.
 Culture is communication, communication is culture.
 Culture in its broadest sense is cultivated behavior; that is the totality of a person's learned, accumulated experience which is socially transmitted, or more briefly, behavior through social learning.
@@ -17,7 +18,7 @@ Culture consists of patterns, explicit and implicit, of and for behavior acquire
 Culture is the sum of total of the learned behavior of a group of people that are generally considered to be the tradition of that people and are transmitted from generation to generation.
 Culture is a collective programming of the mind that distinguishes the members of one group or category of people from another.
 "Texas A&M"
-</p2>
+</p>
    </div>
   );
   }

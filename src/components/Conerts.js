@@ -1,15 +1,14 @@
 import React, { useState, useEffect } from "react";
 import EventCard from "./EventCard";
-import './Card.css';
 import "./EventList.css";
 
 
-function Sports({ search }) {
+function Concerts({ search }) {
   const [events, setEvents] = useState([]);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:3001/events?category=Sports`)
+    fetch(`http://localhost:3001/events?category=Concert`)
       .then((resp) => {
         if (!resp.ok) {
           throw new Error("Failed to fetch events");
@@ -19,6 +18,8 @@ function Sports({ search }) {
       .then((data) => setEvents(data))
       .catch((error) => setError(error.message));
   }, []);
+
+ 
 
   function removeEvent(eventId) {
     const filteredEvents = events.filter((event) => event.id !== eventId);
@@ -36,11 +37,11 @@ function Sports({ search }) {
   ));
   
   return (
-    <div className="sports-container">
-      <h1>Sports Events</h1>
+    <div className="concert-container">
+      <h1>Concerts </h1>
       {error && <p>Error: {error}</p>}
       {eventCards.length === 0 ? (
-        <p>No Sport Events Available.</p>
+        <p>No Concerts Available.</p>
       ) : (
         <ul className="cards">
           {eventCards}
@@ -49,6 +50,5 @@ function Sports({ search }) {
     </div>
   );
 }
-export default Sports;
 
-
+export default Concerts;

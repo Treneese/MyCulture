@@ -4,7 +4,7 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: red;
+    background-color: rgb(48, 188, 17);
 
     display: flex;
     justify-content: center;
@@ -16,7 +16,9 @@
     padding: 32px;
     width: 100%;
     max-width: 640px;
-    background-color: orange;
+    background-color: rgb(48, 188, 17);
+    border-radius: 10px;
+    border: 2px solid rgb(247, 246, 237);
 }
 
 .description-inner-popup .close-btn{

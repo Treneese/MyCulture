@@ -6,4 +6,14 @@
     flex-wrap: wrap;
     justify-content: space-between;
     list-style-type: none;
+    background-color:  rgb(48, 188, 17);
+}
+h1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 19px;
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: center;
 }

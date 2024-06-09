@@ -15,12 +15,39 @@ height: 100%;
     display: flex;
     flex-direction: row;
     width: 100%;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    justify-content:space-between;
+    
+    
+    
+}
+.quote-box{
+   
+    left: 0px; 
+    width: 4000px;
+    height: 6.7rem;
+    top: 15px;
+    border: 1.9px solid rgb(255, 149, 0);
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding: 10px;
+    
 
 }
-.toggle{
-    top: 16px;
-    right: 16px;
-    padding: auto;
+.quote{
+    font-size: 21px; 
+    color: #ffffff;
+    width: 100% ;
+    text-decoration: none;
+    font-weight: 400;
+    text-align: center;
+
+    
 }
 button{
     top: 16px;
@@ -28,19 +55,34 @@ button{
     padding: auto;  
 }
 .menu{
-    list-style: none;
-    text-decoration: none;
-    padding: .3rem;
-    border: 0.3em rgb(255, 255, 255);
-    display: inline-block;
+    list-style: none; 
+    display: flex; /* Use flex for horizontal layout */
     flex-direction: row;
-    background-color: rgb(36, 158, 2);
-    color: green;
+    font-size: 17px;
+    padding: 7px 1%;
+    border-radius: 40px;
+    margin-left: 30px;
+    transition: .3s;
+    width: 36%;
 
-    
 
 }
-/* .header-title{
-    font-size: calc(10px + 2vmin);
-    color: rgb(242, 236, 236);
-} */
+.menu li {
+    margin: 0 10px; /* Add some spacing between items */
+}
+
+.menu a {
+    color: rgb(248, 246, 239);
+    text-decoration: none;
+    font-weight: 400;
+    border-radius: 10px;
+    border: 2px solid rgb(247, 246, 237);
+    transition: .3s;
+    padding: 2px 4px; 
+}
+
+.menu a:hover{ 
+    color: rgb(255, 149, 0);
+    box-shadow: 0 0 20px rgb(255, 149, 0);
+    border-color: rgb(255, 149, 0); 
+}

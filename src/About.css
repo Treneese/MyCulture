@@ -1,6 +1,28 @@
-.about{
-align-items: center;
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 19px;
+    margin: 0 auto;
+    max-width: 800px;
+    text-align: center;
+    background-color:  rgb(48, 188, 17);
+
 }
 .title{
-padding: auto;
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: white;
+}
+
+.sub-title{
+    margin-bottom: 15px;
+    font-size: 1.3em;
+    color: white;
+}
+.def{
+    font-size: 1em;
+    line-height: 1.6;
+    text-align: justify;
+    color: white;
 }

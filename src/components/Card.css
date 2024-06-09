@@ -3,7 +3,7 @@
 
   .card-container{
     background-color: #01010127;
-  border: .3rem solid rgb(48, 188, 17);
+  border: .3rem solid rgb(251, 253, 251);
   border-radius: 10px;
   box-shadow: 5px 5px 5pxrgb(50, 50, 50) (0, 0%, 0.1);
   padding: 20px;
@@ -33,5 +33,5 @@
   }
   .card-text{
     align-items: center;
-
+    color: white;
   }

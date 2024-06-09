@@ -1,12 +1,6 @@
 import React, { useState, useEffect } from "react";
-import EventList from "./EventList";
-import { Route, Routes} from 'react-router-dom';
 import Search from "./Search";
-import Header from "./Header";
-import EventFormPage from './EventFormPage';
-// import Sports from './Sports';
-// import Festivals from './Festivals';
-// import Business from './Busniess';
+
 import './EventPage.css';
 import EventCard from "./EventCard";
 
@@ -28,7 +22,7 @@ function EventPage( ) {
       .catch((error) =>  setError(error.message))
     
    
-  },[setEvents]);
+  },[setEvents, setError]);
 
   function handleSearch(searchEvent) {
     setSearch(searchEvent);

@@ -679,6 +679,16 @@
       "date": "May, 31",
       "description": "Get ready for some real talk about black-owned businesses at our event Black Business Talks May 31st!! ",
       "location": "Edina, MN"
+    },
+    {
+      "id": "ff35",
+      "name": "AfroNation",
+      "image": "https://upload.wikimedia.org/wikipedia/en/1/14/Afro_Nation.jpg",
+      "category": "Festival",
+      "subcategory": "Afro",
+      "date": "2024-05-14",
+      "description": "",
+      "location": "Atlanta"
     }
   ]
 }

@@ -4,9 +4,9 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: rgb(226, 223, 223);
+    background-color:  rgb(48, 188, 17);
     color:black;
-    border: .4rem solid rgb(48, 188, 17);
+    border: .4rem solid white;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,12 +17,12 @@
     padding: 32px;
     width: 100%;
     max-width: 640px;
-    background-color: rgb(10, 188, 10);
-    border: .4rem solid #9f9c9c5c;
+    background-color: rgb rgb(48, 188, 17);
+    border: .4rem solid  rgb(48, 188, 17);
 }
 .display{
-    background-color: #9f9c9c5c;
-    border: .4rem solid rgb(48, 188, 17);
+    background-color:  rgb(48, 188, 17);
+    border: .4rem solid white;
     border-radius: 10px;
     box-shadow: 5px 5px 5pxrgb(50, 50, 50) (0, 0%, 0.1);
     padding: 20px;
